@@ -12,6 +12,7 @@
   "dependencies": {
     "framer-motion": "^6.5.1",
     "gsap": "^3.10.4",
+    "lightgallery": "^2.5.0",
     "motion": "^10.13.1",
     "next": "12.2.3",
     "react": "18.2.0",
