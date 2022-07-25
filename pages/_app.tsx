@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
+import NavBar from '../components/navbar';
 
 import Head from 'next/head';
 
@@ -17,6 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <title>Zach Cossman Designs</title>
       </Head>
+      <NavBar />
       <Component {...pageProps} />
     </>
   );
