@@ -14,3 +14,26 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/*** Variables ***/
+:root {
+  /* Colors */
+  --color-darkGrey: #484d5c;
+  --color-lightGrey: #c0ccd4;
+  --color-accent: #ffcc00;
+  /* Fonts */
+  --font-h1: 4.209rem;
+  --font-h2: 3.157rem;
+  --font-h3: 2.369rem;
+  --font-h4: 1.777rem;
+  --font-h5: 1.333rem;
+  --font-base: 1rem;
+  /* Breakpoints */
+  --breakpoint-tablet: 865px;
+  --breakpoint-phone: 630px;
+}
+/*** End Variables ***/
+
+body {
+  background-color: var(--color-darkGrey);
+}
