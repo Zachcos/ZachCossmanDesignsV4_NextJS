@@ -19,7 +19,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Zach Cossman Designs</title>
       </Head>
       <NavBar />
-      <Component {...pageProps} />
+      <div className='fullWrap'>
+        <Component {...pageProps} />
+      </div>
     </>
   );
 }
