@@ -1,36 +1,3 @@
-/*** Variables ***/
-:root {
-  /* Colors */
-  --color-darkGrey: #484d5c;
-  --color-lightGrey: #c0ccd4;
-  --color-accent: #ffcc00;
-  /* Fonts */
-  --font-h1: 4.209rem;
-  --font-h2: 3.157rem;
-  --font-h3: 2.369rem;
-  --font-h4: 1.777rem;
-  --font-h5: 1.333rem;
-  --font-base: 1rem;
-  /* Breakpoints */
-  --breakpoint-tablet: 865px;
-  --breakpoint-phone: 630px;
-}
-/*** End Variables ***/
-
-/*** Font declaration ***/
-@font-face {
-  font-family: 'Open Sans';
-  font-weight: 100 900;
-  src: url('../fonts/OpenSans-VariableFont.ttf') format('truetype-variations');
-}
-
-@font-face {
-  font-family: 'Oswald';
-  font-weight: 100 900;
-  src: url('../fonts/Oswald-VariableFont.ttf') format('truetype-variations');
-}
-/*** End font declaration ***/
-
 /*** Reset***/
 html,
 body,
@@ -120,7 +87,77 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 /*** End Reset ***/
+
+/*** Variables ***/
+:root {
+  /* Colors */
+  --color-darkGrey: #484d5c;
+  --color-lightGrey: #c0ccd4;
+  --color-accent: #ffcc00;
+  /* Fonts */
+  --font-h1: 4.209rem;
+  --font-h2: 3.157rem;
+  --font-h3: 2.369rem;
+  --font-h4: 1.777rem;
+  --font-h5: 1.333rem;
+  --font-base: 1rem;
+  /* Breakpoints */
+  --breakpoint-tablet: 865px;
+  --breakpoint-phone: 630px;
+}
+/*** End Variables ***/
+
+/*** Font declaration ***/
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 100 900;
+  src: url('../fonts/OpenSans-VariableFont.ttf') format('truetype-variations');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-weight: 100 900;
+  src: url('../fonts/Oswald-VariableFont.ttf') format('truetype-variations');
+}
+/*** End font declaration ***/
 
 html {
   font-size: 18px;
@@ -137,8 +174,11 @@ body {
   margin: 0 60px;
 }
 
-@media screen and (max-width: var(--breakpoint-tablet)) {
+@media screen and (max-width: 865px) {
   html {
     font-size: 16px;
+  }
+  .fullWrap {
+    margin: 0 35px;
   }
 }
