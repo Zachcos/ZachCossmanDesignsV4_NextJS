@@ -43,3 +43,37 @@
   bottom: -4px;
   opacity: 1;
 }
+
+@media screen and (max-width: 865px) {
+  .heroContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .heroDisplayText {
+    margin-bottom: 120px;
+    text-align: center;
+  }
+
+  .heroDisplayCopy {
+    margin-bottom: 120px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .heroContainer {
+    margin-top: 150px;
+  }
+
+  .heroDisplayText {
+    font-size: var(--font-h3);
+    margin-bottom: 60px;
+  }
+
+  .heroDisplayCopy {
+    margin-bottom: 60px;
+  }
+}
