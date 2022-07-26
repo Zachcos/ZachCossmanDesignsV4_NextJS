@@ -14,7 +14,6 @@ const NavBar = () => {
       <div className={styles.logoContainer}>
         <Link href='/' aria-label='home'>
           logo here
-          {/* <img src={logo} alt='' /> */}
         </Link>
       </div>
       <div
