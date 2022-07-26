@@ -20,13 +20,13 @@ const NavBar = () => {
         </Link>
       </div>
       <div
-        className={`${styles.hamburger} ${isOpen ? styles.open : undefined}`}
+        className={`${styles.hamburger} ${isOpen ? styles.open : ''}`}
         onClick={() => setIsOpen(!isOpen)}
       >
         <span />
         <span />
       </div>
-      <div className={`${styles.navItems} ${isOpen ? styles.open : undefined}`}>
+      <div className={`${styles.navItems} ${isOpen ? styles.open : ''}`}>
         <Link href='/work' aria-label='work' onClick={() => setIsOpen(false)}>
           <a className={styles.textLink}>work</a>
         </Link>
