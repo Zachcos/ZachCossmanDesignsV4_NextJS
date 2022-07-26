@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
+import CtaBtn from '../components/ctaBtn';
 
 const Home: NextPage = () => {
   return (
@@ -17,7 +18,7 @@ const Home: NextPage = () => {
         </Link>
         , and get in touch...
       </p>
-      {/* <CtaBtn /> */}
+      <CtaBtn />
     </div>
   );
 };
