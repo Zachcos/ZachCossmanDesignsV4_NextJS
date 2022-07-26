@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from '../styles/NavBar.module.css';
+import { Behance, Github } from './icons';
 
 const NavBar = () => {
   return (
@@ -45,8 +46,7 @@ const NavBar = () => {
           className='iconLink'
           aria-label='behance'
         >
-          Behance link
-          {/* <Behance /> */}
+          <Behance />
         </a>
         <a
           href='https://github.com/Zachcos'
@@ -55,8 +55,7 @@ const NavBar = () => {
           className='iconLink'
           aria-label='github'
         >
-          Github link
-          {/* <Github /> */}
+          <Github />
         </a>
       </div>
     </nav>
