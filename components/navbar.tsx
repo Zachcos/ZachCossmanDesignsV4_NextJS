@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/NavBar.module.css';
 import { Behance, Github, Logo } from './icons';
 
 const NavBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <nav
       className={styles.navbarContainer}
@@ -19,18 +20,17 @@ const NavBar = () => {
         </Link>
       </div>
       <div
-        className='hamburger'
-        // onClick={() => setIsOpen(!isOpen)}
-        // className={isOpen ? 'open' : ''}
+        className={`${styles.hamburger} ${isOpen ? styles.open : undefined}`}
+        onClick={() => setIsOpen(!isOpen)}
       >
         <span />
         <span />
       </div>
-      <div className={styles.navItems}>
-        <Link href='/work' aria-label='work'>
+      <div className={`${styles.navItems} ${isOpen ? styles.open : undefined}`}>
+        <Link href='/work' aria-label='work' onClick={() => setIsOpen(false)}>
           <a className={styles.textLink}>work</a>
         </Link>
-        <Link href='/about' aria-label='about'>
+        <Link href='/about' aria-label='about' onClick={() => setIsOpen(false)}>
           <a className={styles.textLink}>about</a>
         </Link>
         <a
