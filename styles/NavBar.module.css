@@ -58,13 +58,14 @@
 
 .iconLink {
   transition: all 0.2s ease-out;
+  top: 3px;
   z-index: 1;
 }
 
 .iconLink:after {
   background: var(--color-accent);
   border-radius: 50%;
-  bottom: 50%;
+  bottom: 54%;
   content: '';
   height: 0px;
   left: 50%;
