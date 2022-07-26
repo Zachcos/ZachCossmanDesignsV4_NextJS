@@ -10,3 +10,16 @@
   height: 28px;
   width: 28px;
 }
+
+.logo {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  stroke-linejoin: round;
+  stroke-miterlimit: 2;
+  fill: var(--color-accent);
+  width: 32px;
+}
+
+#Layer-2 path {
+  fill: var(--color-accent);
+}
