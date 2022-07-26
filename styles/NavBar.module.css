@@ -58,7 +58,6 @@
 
 .iconLink {
   transition: all 0.2s ease-out;
-  top: 3px;
   z-index: 1;
 }
 
