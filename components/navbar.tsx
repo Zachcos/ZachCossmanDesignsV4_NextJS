@@ -43,8 +43,8 @@ const NavBar = () => {
           href='https://behance.net/Zachcos'
           target='_blank'
           rel='noreferrer'
-          className='iconLink'
           aria-label='behance'
+          className={styles.iconLink}
         >
           <Behance />
         </a>
@@ -52,8 +52,8 @@ const NavBar = () => {
           href='https://github.com/Zachcos'
           target='_blank'
           rel='noreferrer'
-          className='iconLink'
           aria-label='github'
+          className={styles.iconLink}
         >
           <Github />
         </a>
