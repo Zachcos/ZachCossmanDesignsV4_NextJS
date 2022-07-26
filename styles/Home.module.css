@@ -1,8 +1,45 @@
 .heroContainer {
+  margin-top: 220px;
+  position: relative;
+  width: 695px;
 }
 
 .heroDisplayText {
+  color: var(--color-accent);
+  font-family: 'Oswald', sans-serif;
+  font-size: var(--font-h1);
+  font-weight: 400;
+  line-height: 1.2em;
+  margin-bottom: 50px;
+  position: relative;
+  text-transform: uppercase;
 }
 
 .heroDisplayCopy {
+  line-height: 2em;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.aboutLink {
+  text-decoration: none;
+  color: var(--color-lightGrey);
+  position: relative;
+}
+
+.aboutLink:after {
+  background: var(--color-accent);
+  bottom: -8px;
+  content: '';
+  height: 3px;
+  left: 0;
+  opacity: 0.2;
+  position: absolute;
+  transition: all 0.15s ease-out;
+  width: 100%;
+}
+
+.aboutLink:hover:after {
+  bottom: -4px;
+  opacity: 1;
 }

@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         experiences for companies and creative individuals. Check out my work,
         learn more{' '}
         <Link href='/about' aria-label='about'>
-          <a>about me</a>
+          <a className={styles.aboutLink}>about me</a>
         </Link>
         , and get in touch...
       </p>
