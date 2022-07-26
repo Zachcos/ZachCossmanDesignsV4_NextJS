@@ -56,6 +56,35 @@
   opacity: 1;
 }
 
+.iconLink {
+  transition: all 0.2s ease-out;
+  z-index: 1;
+}
+
+.iconLink:after {
+  background: var(--color-accent);
+  border-radius: 50%;
+  bottom: 50%;
+  content: '';
+  height: 0px;
+  left: 50%;
+  opacity: 1;
+  position: absolute;
+  transform: translate(-50%, 50%);
+  transition: all 0.2s ease-out;
+  width: 0px;
+  z-index: -1;
+}
+
+.iconLink:hover svg {
+  fill: var(--color-darkGrey);
+}
+
+.iconLink:hover:after {
+  height: 50px;
+  width: 50px;
+}
+
 @media screen and (max-width: var(--breakpoint-phone)) {
   .logoContainer {
     margin: 0 auto 0 40px;
