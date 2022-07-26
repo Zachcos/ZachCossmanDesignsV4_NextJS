@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from '../styles/NavBar.module.css';
-import { Behance, Github } from './icons';
+import { Behance, Github, Logo } from './icons';
 
 const NavBar = () => {
   return (
@@ -13,7 +13,9 @@ const NavBar = () => {
     >
       <div className={styles.logoContainer}>
         <Link href='/' aria-label='home'>
-          logo here
+          <a>
+            <Logo />
+          </a>
         </Link>
       </div>
       <div
