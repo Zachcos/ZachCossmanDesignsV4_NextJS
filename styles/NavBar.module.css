@@ -1,0 +1,63 @@
+.navbarContainer {
+  align-items: center;
+  background: var(--color-darkGrey);
+  display: flex;
+  height: 120px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logoContainer {
+  height: 45px;
+  margin: 0 auto 0 60px;
+  width: 32px;
+}
+.logoContainer img {
+  height: 100%;
+  width: 100%;
+}
+
+.navItems {
+  align-items: center;
+  display: flex;
+  font-family: 'Oswald', sans-serif;
+  font-size: var(--font-base);
+  justify-content: space-between;
+  margin-right: 60px;
+  width: 400px;
+}
+
+.textLink,
+.iconLink {
+  color: var(--color-lightGrey);
+  cursor: pointer;
+  padding: 5px;
+  position: relative;
+  text-decoration: none;
+}
+
+.textLink:after {
+  background: var(--color-accent);
+  bottom: -10px;
+  content: '';
+  height: 3px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  transition: 0.15s ease-out;
+  width: 100%;
+}
+
+.textLink:hover:after {
+  bottom: -5px;
+  opacity: 1;
+}
+
+@media screen and (max-width: var(--breakpoint-phone)) {
+  .logoContainer {
+    margin: 0 auto 0 40px;
+  }
+}
