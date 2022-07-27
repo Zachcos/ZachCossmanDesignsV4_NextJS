@@ -102,7 +102,7 @@ const About: NextPage = () => {
         </div>
       </section>
       <section className={styles.sectionWrapper}>
-        <Image src={zachImage} alt='' />
+        <Image src={zachImage} alt='' placeholder='blur' />
       </section>
       <Footer />
     </div>
