@@ -3,6 +3,7 @@ import styles from '../styles/Work.module.css';
 import type { NextPage } from 'next';
 
 import Footer from '../components/footer';
+import FeaturedItem from '../components/featuredItem';
 
 const Work: NextPage = () => {
   return (
@@ -24,6 +25,7 @@ const Work: NextPage = () => {
           >
             Featured Projects
           </div>
+          <FeaturedItem />
           {/* 
           //! Iterate through featured projects
           {data.featured.edges.map((item) => (
