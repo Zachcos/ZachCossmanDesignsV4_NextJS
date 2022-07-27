@@ -64,7 +64,7 @@
 .iconLink:after {
   background: var(--color-accent);
   border-radius: 50%;
-  bottom: 54%;
+  bottom: 50%;
   content: '';
   height: 0px;
   left: 50%;
