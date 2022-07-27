@@ -30,4 +30,37 @@
 }
 
 .otherProjectWrapper {
+  height: 275px;
+  margin: 25px;
+  overflow: hidden;
+  width: 275px;
+}
+
+@media screen and (max-width: 856px) {
+  .otherProjectWrapper {
+    height: 200px;
+    margin: 15px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .workWrapper {
+    margin: 170px 0 100px 0;
+  }
+
+  .featuredWrapper {
+    margin-bottom: 100px;
+  }
+
+  .wrapperHeading {
+    font-size: var(--font-h3);
+    text-align: center;
+  }
+
+  .otherProjectWrapper {
+    height: 130px;
+    margin: 15px 0;
+    width: 130px;
+  }
 }
