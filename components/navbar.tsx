@@ -1,13 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from '../styles/NavBar.module.css';
 import { Behance, Github, Logo } from './icons';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [shouldShow, setShouldShow] = useState(true);
+  const [lastYPos, setLastYPos] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth <= 600) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+
+    function handleScroll() {
+      const yPos = window.scrollY;
+      const isScrollingUp = yPos < lastYPos;
+
+      setShouldShow(isScrollingUp);
+      setLastYPos(yPos);
+    }
+
+    window.addEventListener('scroll', handleScroll, false);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll, false);
+    };
+  }, [lastYPos]);
+
   return (
     <nav
-      className={styles.navbarContainer}
+      //! Replace with animation library
+      className={`${styles.navbarContainer} ${shouldShow ? styles.show : ''}`}
       // animate={{ top: shouldShow || isMobile ? 0 : '-120px' }}
       // initial={{ top: 0 }}
       // transition={{ ease: 'easeOut', duration: 0.5 }}
