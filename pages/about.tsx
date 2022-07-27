@@ -1,5 +1,8 @@
 import type { NextPage } from 'next';
+import Image from 'next/image';
 import styles from '../styles/About.module.css';
+
+import zachImage from '../public/ZachC181.jpg';
 
 const About: NextPage = () => {
   return (
@@ -98,7 +101,7 @@ const About: NextPage = () => {
         </div>
       </section>
       <section className={styles.sectionWrapper}>
-        {/* <img src={aboutImg} alt='' /> */}
+        <Image src={zachImage} alt='' />
       </section>
       {/* <Footer /> */}
     </div>
