@@ -1,5 +1,6 @@
 const featuredProjectData = [
   {
+    'id': 1,
     "title": "Zach Cossman v4",
     "description": [
       "Version 4 of my personal acting site",
@@ -20,6 +21,7 @@ const featuredProjectData = [
     ]
   },
   {
+    'id': 2,
     "title": "Zach Cossman Designs v3",
     "description": [
       "The v3 redesign of Zach Cossman Designs was originally a static site where I managed all the portfolio items manually. Once I learned GatsbyJS, it was a no-brainer to covert the portfolio information into JSON data and allow the site to create the portfolio links by itself, as well as programatically create the full-page portfolio detail pages.",
@@ -39,6 +41,7 @@ const featuredProjectData = [
     ]
   },
   {
+    'id': 3,
     "title": "Brooklyn Custom Shop",
     "description": [
       "A fictional guitar site I built to learn about Flexbox, with the mobile menu as a first foray into more involved hover states.",
@@ -60,46 +63,57 @@ const featuredProjectData = [
 
 const otherProjectData = [
   {
+    "id": 1,
     "thumbImg": "/images/other/behance_zachcossman.jpg",
     "behanceUrl": "https://www.behance.net/gallery/111232249/Zach-Cossman-site-design"
   },
   {
+    "id": 2,
     "thumbImg": "/images/other/behance_brandonkellycreative.jpg",
     "behanceUrl": "https://www.behance.net/gallery/110162489/Brandon-Kelly-Creative-site-design"
   },
   {
+    "id": 3,
     "thumbImg": "/images/other/behance_dorightconsultants.jpg",
     "behanceUrl": "https://www.behance.net/gallery/110163523/Do-Right-Consultants-site-design"
   },
   {
+    "id": 4,
     "thumbImg": "/images/other/behance_brooklyncustomshop.jpg",
     "behanceUrl": "https://www.behance.net/gallery/108861901/Brooklyn-Custom-Shop-site-design"
   },
   {
+    "id": 5,
     "thumbImg": "/images/other/behance_townsleygay.jpg",
     "behanceUrl": "https://www.behance.net/gallery/108862177/Townsley-Gay-custom-WP-Template"
   },
   {
+    "id": 6,
     "thumbImg": "/images/other/behance_zachcossmandesignsv3.jpg",
     "behanceUrl": "https://www.behance.net/gallery/108861963/ZachCossmanDesigns-v3"
   },
   {
+    "id": 7,
     "thumbImg": "/images/other/behance_ddmproductions.jpg",
     "behanceUrl": "https://www.behance.net/gallery/110162853/DDM-Productions-site-design"
   },
   {
+    "id": 8,
     "thumbImg": "/images/other/behance_broadwaycharitysongs.jpg",
     "behanceUrl": "https://www.behance.net/gallery/108862035/Broadway-Charity-Songs-site-design"
   },
   {
+    "id": 9,
     "thumbImg": "/images/other/behance_sheetswap.jpg",
     "behanceUrl": "https://www.behance.net/gallery/108862085/SheetSwap-site-design"
   },
   {
+    "id": 10,
     "thumbImg": "/images/other/behance_tunehound.jpg",
     "behanceUrl": "https://www.behance.net/gallery/108861257/TuneHound-Dashboard"
   },
   {
+    "id": 11,
     "thumbImg": "/images/other/behance_woodelfcollective.jpg",
     "behanceUrl": "https://www.behance.net/gallery/108861681/Woodelf-Collective-Branding"
   }
