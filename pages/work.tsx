@@ -1,11 +1,46 @@
 import React from 'react';
 import styles from '../styles/Work.module.css';
-import type { NextPage } from 'next';
+import { featuredProjectData, otherProjectData } from '../data/data';
 
 import Footer from '../components/footer';
 import FeaturedItem from '../components/featuredItem';
 
-const Work: NextPage = () => {
+export const getStaticProps = async () => {
+  return {
+    props: {
+      featured: featuredProjectData,
+      other: otherProjectData,
+    },
+  };
+};
+
+interface FeaturedItem {
+  title: string;
+  description: string[];
+  slug: string;
+  liveUrl: string;
+  portImg: string;
+  nextProj: {
+    title: string;
+    slug: string;
+  };
+  assets: string[];
+  map: Function;
+}
+
+interface OtherItem {
+  thumbImg: string;
+  behanceUrl: string;
+  map: Function;
+}
+
+interface Props {
+  featured: FeaturedItem[];
+  other: OtherItem[];
+}
+
+//? Look into how to implement NextPage
+const Work = ({ featured, other }: Props) => {
   return (
     <>
       <div
@@ -26,15 +61,15 @@ const Work: NextPage = () => {
             Featured Projects
           </div>
           <FeaturedItem />
-          {/* 
-          //! Iterate through featured projects
-          {data.featured.edges.map((item) => (
-            <div className={styles.featuredItem}
-              // key={item.node.id}
-              // item={item.node}
-              // {...aniVariants.child}
-            />
-          ))} */}
+          {featured.map((item: any) => (
+            // <div
+            //   className={styles.featuredItem}
+            //   key={item.title}
+            //   // item={item}
+            //   // {...aniVariants.child}
+            // />
+            <h1 key='test'>{item.title}</h1>
+          ))}
         </div>
         <div className={styles.otherWrapper}>
           <div className={styles.wrapperHeading}>Other Projects</div>
