@@ -14,9 +14,9 @@ const featuredProjectData = [
       "slug": "/zachcossmandesignsv3"
     },
     "assets": [
-      "../../images/projects/zachcossmanv4/img_1.jpg",
-      "../../images/projects/zachcossmanv4/img_2.jpg",
-      "../../images/projects/zachcossmanv4/img_3.jpg"
+      "/images/projects/zachcossmanv4/img_1.jpg",
+      "/images/projects/zachcossmanv4/img_2.jpg",
+      "/images/projects/zachcossmanv4/img_3.jpg"
     ]
   },
   {
@@ -28,14 +28,14 @@ const featuredProjectData = [
     ],
     "slug": "zachcossmandesignsv3",
     "liveUrl": "https://zachcossmandesigns.netlify.app",
-    "portImg": "../../images/projects/zachcossmandesigns3/port_img.jpg",
+    "portImg": "/images/projects/zachcossmandesigns3/port_img.jpg",
     "nextProj": {
       "title": "Brooklyn Custom Shop",
       "slug": "/brooklyncustomshop"
     },
     "assets": [
-      "../../images/projects/zachcossmandesigns3/img_1.jpg",
-      "../../images/projects/zachcossmandesigns3/img_2.jpg"
+      "/images/projects/zachcossmandesigns3/img_1.jpg",
+      "/images/projects/zachcossmandesigns3/img_2.jpg"
     ]
   },
   {
@@ -52,55 +52,55 @@ const featuredProjectData = [
       "slug": "/zachcossmanv4"
     },
     "assets": [
-      "../../images/projects/brooklyncustomshop/img_1.jpg",
-      "../../images/projects/brooklyncustomshop/img_2.jpg"
+      "/images/projects/brooklyncustomshop/img_1.jpg",
+      "/images/projects/brooklyncustomshop/img_2.jpg"
     ]
   }
 ]
 
 const otherProjectData = [
   {
-    "thumbImg": "../../images/other/behance_zachcossman.jpg",
+    "thumbImg": "/images/other/behance_zachcossman.jpg",
     "behanceUrl": "https://www.behance.net/gallery/111232249/Zach-Cossman-site-design"
   },
   {
-    "thumbImg": "../../images/other/behance_brandonkellycreative.jpg",
+    "thumbImg": "/images/other/behance_brandonkellycreative.jpg",
     "behanceUrl": "https://www.behance.net/gallery/110162489/Brandon-Kelly-Creative-site-design"
   },
   {
-    "thumbImg": "../../images/other/behance_dorightconsultants.jpg",
+    "thumbImg": "/images/other/behance_dorightconsultants.jpg",
     "behanceUrl": "https://www.behance.net/gallery/110163523/Do-Right-Consultants-site-design"
   },
   {
-    "thumbImg": "../../images/other/behance_brooklyncustomshop.jpg",
+    "thumbImg": "/images/other/behance_brooklyncustomshop.jpg",
     "behanceUrl": "https://www.behance.net/gallery/108861901/Brooklyn-Custom-Shop-site-design"
   },
   {
-    "thumbImg": "../../images/other/behance_townsleygay.jpg",
+    "thumbImg": "/images/other/behance_townsleygay.jpg",
     "behanceUrl": "https://www.behance.net/gallery/108862177/Townsley-Gay-custom-WP-Template"
   },
   {
-    "thumbImg": "../../images/other/behance_zachcossmandesignsv3.jpg",
+    "thumbImg": "/images/other/behance_zachcossmandesignsv3.jpg",
     "behanceUrl": "https://www.behance.net/gallery/108861963/ZachCossmanDesigns-v3"
   },
   {
-    "thumbImg": "../../images/other/behance_ddmproductions.jpg",
+    "thumbImg": "/images/other/behance_ddmproductions.jpg",
     "behanceUrl": "https://www.behance.net/gallery/110162853/DDM-Productions-site-design"
   },
   {
-    "thumbImg": "../../images/other/behance_broadwaycharitysongs.jpg",
+    "thumbImg": "/images/other/behance_broadwaycharitysongs.jpg",
     "behanceUrl": "https://www.behance.net/gallery/108862035/Broadway-Charity-Songs-site-design"
   },
   {
-    "thumbImg": "../../images/other/behance_sheetswap.jpg",
+    "thumbImg": "/images/other/behance_sheetswap.jpg",
     "behanceUrl": "https://www.behance.net/gallery/108862085/SheetSwap-site-design"
   },
   {
-    "thumbImg": "../../images/other/behance_tunehound.jpg",
+    "thumbImg": "/images/other/behance_tunehound.jpg",
     "behanceUrl": "https://www.behance.net/gallery/108861257/TuneHound-Dashboard"
   },
   {
-    "thumbImg": "../../images/other/behance_woodelfcollective.jpg",
+    "thumbImg": "/images/other/behance_woodelfcollective.jpg",
     "behanceUrl": "https://www.behance.net/gallery/108861681/Woodelf-Collective-Branding"
   }
 ]
