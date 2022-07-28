@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../styles/Work.module.css';
 import { featuredProjectData, otherProjectData } from '../data/data';
+import Image from 'next/image';
 
 import Footer from '../components/footer';
 import FeaturedItem from '../components/featuredItem';
@@ -14,7 +15,7 @@ export const getStaticProps = async () => {
   };
 };
 
-interface FeaturedItem {
+interface FeaturedItemProps {
   title: string;
   description: string[];
   slug: string;
@@ -28,15 +29,15 @@ interface FeaturedItem {
   map: Function;
 }
 
-interface OtherItem {
+interface OtherItemProps {
   thumbImg: string;
   behanceUrl: string;
   map: Function;
 }
 
 interface Props {
-  featured: FeaturedItem[];
-  other: OtherItem[];
+  featured: FeaturedItemProps[];
+  other: OtherItemProps[];
 }
 
 //? Look into how to implement NextPage
@@ -60,29 +61,29 @@ const Work = ({ featured, other }: Props) => {
           >
             Featured Projects
           </div>
-          <FeaturedItem />
-          {featured.map((item: any) => (
-            // <div
-            //   className={styles.featuredItem}
-            //   key={item.title}
-            //   // item={item}
-            //   // {...aniVariants.child}
-            // />
-            <h1 key='test'>{item.title}</h1>
+          {featured.map((item: FeaturedItemProps) => (
+            <FeaturedItem
+              key={item.title}
+              {...item}
+              // {...aniVariants.child}
+            />
           ))}
         </div>
         <div className={styles.otherWrapper}>
           <div className={styles.wrapperHeading}>Other Projects</div>
-          {
-            //! Iterate through other projects
-            /* {data.other.edges.map((item: OtherProps) => (
-            <div className={styles.otherProjectWrapper} key={item.node.id}>
-              <a href={item.node.behanceUrl} target='_blank' rel='noreferrer'>
-                <img src={item.node.thumbImg} alt='' />
+          {other.map((item: OtherItemProps) => (
+            <div className={styles.otherProjectWrapper} key={1}>
+              <a href={item.behanceUrl} target='_blank' rel='noreferrer'>
+                <Image
+                  src={item.thumbImg}
+                  alt=''
+                  objectFit='cover'
+                  width={275}
+                  height={275}
+                />
               </a>
             </div>
-          ))} */
-          }
+          ))}
         </div>
       </div>
       <Footer />

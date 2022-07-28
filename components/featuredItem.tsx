@@ -1,26 +1,27 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from '../styles/FeaturedItem.module.css';
 
-const FeaturedItem = () => {
+interface Props {
+  slug: string;
+  portImg: string;
+  title: string;
+}
+
+const FeaturedItem = ({ slug, portImg, title }: Props) => {
   return (
     <div
       className={styles.wrapper}
       // {...variants}
     >
-      <Link
-        href='#'
-        // href={item.slug}
-      >
-        <>
+      <Link href={`/work/${slug}`}>
+        <a>
           <div className={styles.imageFrame}>
-            <img
-              // src={item.portImg}
-              alt=''
-            />
+            <Image src={portImg} alt='' layout='fill' objectFit='cover' />
           </div>
-          <div className={styles.title}>{/* {item.title} */}</div>
-        </>
+          <div className={styles.title}>{title}</div>
+        </a>
       </Link>
     </div>
   );

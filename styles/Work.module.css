@@ -36,6 +36,14 @@
   width: 275px;
 }
 
+.otherProjectWrapper img {
+  transition: 0.15s ease-out;
+}
+
+.otherProjectWrapper:hover img {
+  transform: scale(1.1);
+}
+
 @media screen and (max-width: 856px) {
   .otherProjectWrapper {
     height: 200px;
