@@ -54,11 +54,15 @@ const NavBar = () => {
         <span />
       </div>
       <div className={`${styles.navItems} ${isOpen ? styles.open : ''}`}>
-        <Link href='/work' aria-label='work' onClick={() => setIsOpen(false)}>
-          <a className={styles.textLink}>work</a>
+        <Link href='/work' aria-label='work'>
+          <a className={styles.textLink} onClick={() => setIsOpen(false)}>
+            work
+          </a>
         </Link>
-        <Link href='/about' aria-label='about' onClick={() => setIsOpen(false)}>
-          <a className={styles.textLink}>about</a>
+        <Link href='/about' aria-label='about'>
+          <a className={styles.textLink} onClick={() => setIsOpen(false)}>
+            about
+          </a>
         </Link>
         <a
           href='mailto: zachcos@gmail.com?subject=Hey Zach!'
