@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
+import { AnimatePresence } from 'framer-motion';
 import NavBar from '../components/navbar';
 
 import Head from 'next/head';
@@ -19,7 +20,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <NavBar />
       <div className='fullWrap'>
-        <Component {...pageProps} />
+        <AnimatePresence exitBeforeEnter>
+          <Component {...pageProps} />
+        </AnimatePresence>
       </div>
     </>
   );
