@@ -1,12 +1,13 @@
 import React from 'react';
-import styles from '../styles/Work.module.css';
-import { featuredProjectData, otherProjectData } from '../data/data';
+import styles from '../../styles/Work.module.css';
+import { featuredProjectData, otherProjectData } from '../../data/data';
 import Image from 'next/image';
 
-import Footer from '../components/footer';
-import FeaturedItem from '../components/featuredItem';
+import Footer from '../../components/footer';
+import FeaturedItem from '../../components/featuredItem';
+import { GetStaticProps } from 'next';
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       featured: featuredProjectData,
@@ -14,28 +15,6 @@ export const getStaticProps = async () => {
     },
   };
 };
-
-interface FeaturedItemProps {
-  id: number;
-  title: string;
-  description: string[];
-  slug: string;
-  liveUrl: string;
-  portImg: string;
-  nextProj: {
-    title: string;
-    slug: string;
-  };
-  assets: string[];
-  map: Function;
-}
-
-interface OtherItemProps {
-  id: number;
-  thumbImg: string;
-  behanceUrl: string;
-  map: Function;
-}
 
 interface Props {
   featured: FeaturedItemProps[];
