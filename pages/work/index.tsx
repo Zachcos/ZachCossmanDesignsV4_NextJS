@@ -25,29 +25,11 @@ interface Props {
 const Work = ({ featured, other }: Props) => {
   return (
     <>
-      <div
-        className={styles.workWrapper}
-        // variants={aniVariants.parent}
-        // initial='initial'
-        // animate='animate'
-        // exit='exit'
-      >
-        <div
-          className={styles.featureWrapper}
-          // variants={aniVariants.parent}
-        >
-          <div
-            className={styles.wrapperHeading}
-            // variants={aniVariants.child}
-          >
-            Featured Projects
-          </div>
+      <div className={styles.workWrapper}>
+        <div className={styles.featureWrapper}>
+          <div className={styles.wrapperHeading}>Featured Projects</div>
           {featured.map((item: FeaturedItemProps) => (
-            <FeaturedItem
-              key={item.id}
-              {...item}
-              // {...aniVariants.child}
-            />
+            <FeaturedItem key={item.id} {...item} />
           ))}
         </div>
         <div className={styles.otherWrapper}>

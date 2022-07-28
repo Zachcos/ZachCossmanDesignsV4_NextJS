@@ -7,30 +7,12 @@ import zachImage from '../public/images/ZachC181.jpg';
 
 const About: NextPage = () => {
   return (
-    <div
-      className={styles.aboutWrapper}
-      // variants={aniVariants.parent}
-      // initial='initial'
-      // animate='animate'
-      // exit='exit'
-    >
-      <section
-        className={styles.sectionWrapper}
-        // variants={aniVariants.parent}
-        // initial='initial'
-        // animate='animate'
-        // exit='exit'
-      >
-        <div
-          className={styles.titleWrapper}
-          // variants={aniVariants.child}
-        >
+    <div className={styles.aboutWrapper}>
+      <section className={styles.sectionWrapper}>
+        <div className={styles.titleWrapper}>
           Quick and clean designs for over a decade
         </div>
-        <div
-          className={styles.copyWrapper}
-          //  variants={aniVariants.child}
-        >
+        <div className={styles.copyWrapper}>
           I began my interest in design when I was in my early teens. My cousin
           and I used to find Photoshop tutorials that we liked and would sit on
           the phone for hours while we completed them. (We compared our results

@@ -15,27 +15,10 @@ const ProjectDetail = ({ project }: Props) => {
   const { title, description, liveUrl, nextProj, assets } = project;
   return (
     <>
-      <div
-        className={styles.detailsContainer}
-        // variants={aniVariants.parent}
-        // initial='initial'
-        // animate='animate'
-        // exit='exit'
-      >
-        <div
-          // variants={aniVariants.parent}
-          className={styles.info}
-        >
-          <h2
-            // variants={aniVariants.child}
-            className={styles.title}
-          >
-            {title}
-          </h2>
-          <div
-            // variants={aniVariants.child}
-            className={styles.field}
-          >
+      <div className={styles.detailsContainer}>
+        <div className={styles.info}>
+          <h2 className={styles.title}>{title}</h2>
+          <div className={styles.field}>
             <span className={styles.fieldLabel}>liveUrl</span>
             <span className={styles.fieldInfo}>
               <a href={liveUrl} target='_blank' rel='noreferrer'>
@@ -44,24 +27,13 @@ const ProjectDetail = ({ project }: Props) => {
             </span>
           </div>
         </div>
-        <div
-          // variants={aniVariants.parent}
-          className={styles.description}
-        >
+        <div className={styles.description}>
           {description.map((para: string, index: number) => (
-            <p
-              key={index}
-              // variants={aniVariants.child}
-            >
-              {para}
-            </p>
+            <p key={index}>{para}</p>
           ))}
         </div>
       </div>
-      <div
-        className={styles.assetContainer}
-        // variants={aniVariants.child}
-      >
+      <div className={styles.assetContainer}>
         {assets.map((asset: string, index: number) => (
           <Image
             src={asset}

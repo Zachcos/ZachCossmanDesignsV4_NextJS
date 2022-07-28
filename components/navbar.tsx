@@ -36,9 +36,6 @@ const NavBar = () => {
       //! Replace with animation library
       className={styles.navbarContainer}
       style={{ top: shouldShow || isMobile ? 0 : '-120px' }}
-      // animate={{ top: shouldShow || isMobile ? 0 : '-120px' }}
-      // initial={{ top: 0 }}
-      // transition={{ ease: 'easeOut', duration: 0.5 }}
     >
       <div className={styles.logoContainer}>
         <Link href='/' aria-label='home'>
