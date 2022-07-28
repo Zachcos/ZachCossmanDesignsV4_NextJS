@@ -7,14 +7,14 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [shouldShow, setShouldShow] = useState(true);
   const [lastYPos, setLastYPos] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    if (window.innerWidth <= 600) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
+    // if (window.innerWidth <= 600) {
+    //   setIsMobile(true);
+    // } else {
+    //   setIsMobile(false);
+    // }
 
     function handleScroll() {
       const yPos = window.scrollY;
