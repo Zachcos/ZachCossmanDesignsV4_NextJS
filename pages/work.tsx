@@ -16,6 +16,7 @@ export const getStaticProps = async () => {
 };
 
 interface FeaturedItemProps {
+  id: number;
   title: string;
   description: string[];
   slug: string;
@@ -30,6 +31,7 @@ interface FeaturedItemProps {
 }
 
 interface OtherItemProps {
+  id: number;
   thumbImg: string;
   behanceUrl: string;
   map: Function;
@@ -63,7 +65,7 @@ const Work = ({ featured, other }: Props) => {
           </div>
           {featured.map((item: FeaturedItemProps) => (
             <FeaturedItem
-              key={item.title}
+              key={item.id}
               {...item}
               // {...aniVariants.child}
             />
@@ -72,7 +74,7 @@ const Work = ({ featured, other }: Props) => {
         <div className={styles.otherWrapper}>
           <div className={styles.wrapperHeading}>Other Projects</div>
           {other.map((item: OtherItemProps) => (
-            <div className={styles.otherProjectWrapper} key={1}>
+            <div className={styles.otherProjectWrapper} key={item.id}>
               <a href={item.behanceUrl} target='_blank' rel='noreferrer'>
                 <Image
                   src={item.thumbImg}
