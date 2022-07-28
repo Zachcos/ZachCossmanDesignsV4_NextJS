@@ -7,14 +7,14 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [shouldShow, setShouldShow] = useState(true);
   const [lastYPos, setLastYPos] = useState(0);
-  // const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // if (window.innerWidth <= 600) {
-    //   setIsMobile(true);
-    // } else {
-    //   setIsMobile(false);
-    // }
+    if (window.innerWidth <= 630) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
 
     function handleScroll() {
       const yPos = window.scrollY;
@@ -34,7 +34,8 @@ const NavBar = () => {
   return (
     <nav
       //! Replace with animation library
-      className={`${styles.navbarContainer} ${shouldShow ? styles.show : ''}`}
+      className={styles.navbarContainer}
+      style={{ top: shouldShow || isMobile ? 0 : '-120px' }}
       // animate={{ top: shouldShow || isMobile ? 0 : '-120px' }}
       // initial={{ top: 0 }}
       // transition={{ ease: 'easeOut', duration: 0.5 }}

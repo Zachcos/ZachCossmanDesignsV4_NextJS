@@ -14,10 +14,6 @@
   transition: top 0.25s ease-out;
 }
 
-.navbarContainer.show {
-  top: 0;
-}
-
 .logoContainer {
   height: 45px;
   margin: 0 auto 0 60px;
