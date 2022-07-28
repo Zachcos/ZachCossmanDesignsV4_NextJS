@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from '../styles/About.module.css';
 
 import Footer from '../components/footer';
-import zachImage from '../public/ZachC181.jpg';
+import zachImage from '../public/images/ZachC181.jpg';
 
 const About: NextPage = () => {
   return (
