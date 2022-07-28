@@ -1,4 +1,4 @@
-export const featuredProjectData = [
+const featuredProjectData = [
   {
     "title": "Zach Cossman v4",
     "description": [
@@ -58,7 +58,7 @@ export const featuredProjectData = [
   }
 ]
 
-export const otherProjectData = [
+const otherProjectData = [
   {
     "thumbImg": "../../images/other/behance_zachcossman.jpg",
     "behanceUrl": "https://www.behance.net/gallery/111232249/Zach-Cossman-site-design"
@@ -104,3 +104,5 @@ export const otherProjectData = [
     "behanceUrl": "https://www.behance.net/gallery/108861681/Woodelf-Collective-Branding"
   }
 ]
+
+export {featuredProjectData, otherProjectData};
