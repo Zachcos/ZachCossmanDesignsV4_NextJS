@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import styles from '../styles/About.module.css';
 import { motion } from 'framer-motion';
+import { fadeUpIn, fadeUpInWithChildren, stagger } from '../data/animations';
 
 import Footer from '../components/footer';
 import zachImage from '../public/images/ZachC181.jpg';
@@ -10,45 +11,50 @@ const About: NextPage = () => {
   return (
     <motion.div
       className={styles.aboutWrapper}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial='initial'
+      animate='animate'
+      exit='exit'
     >
-      <section className={styles.sectionWrapper}>
-        <div className={styles.titleWrapper}>
+      <motion.section className={styles.sectionWrapper} variants={stagger}>
+        <motion.div className={styles.titleWrapper} variants={fadeUpIn}>
           Quick and clean designs for over a decade
-        </div>
-        <div className={styles.copyWrapper}>
-          I began my interest in design when I was in my early teens. My cousin
-          and I used to find Photoshop tutorials that we liked and would sit on
-          the phone for hours while we completed them. (We compared our results
-          by sending them through AOL Instant Messenger... ✌🏻👴🏻✌🏻) From there, I
-          dabbled in (terrible) Flash animations and eventually found my footing
-          tinkering with late-90's web builders like Yahoo! GeoCities, where the
-          restrictions of that platform made me want to learn how to write my
-          own code.
-          <br />
-          <br />
-          My first sites were Photoshop designs cut into pieces and reassembled
-          for the web with code from Adobe Dreamweaver. Just as I was publishing
-          my first site, I got my first dose of just how quickly things change
-          in the world of web design and development and began the never-ending
-          journey of learning the new tools of the trade. Through table layouts,
-          floats, and the rest, I have stayed on a constant hunt for the
-          technologies that make sites faster and more versatile, with a
-          majority of my current work being built on React with GatsbyJS for
-          static-site generation.
-          <br />
-          <br />
-          Since the mid 2000's I have been working on a freelance basis with a
-          variety of clients, helping them establish brand identities and better
-          reach their audiences.
-          <br />
-          <br />
-          When I'm not behind the computer, you can find me acting on stage or
-          playing music, or looking for the nearest Starbucks. ☕️
-        </div>
-      </section>
+        </motion.div>
+        <motion.div
+          className={styles.copyWrapper}
+          variants={fadeUpInWithChildren}
+        >
+          <motion.span variants={fadeUpIn}>
+            I began my interest in design when I was in my early teens. My
+            cousin and I used to find Photoshop tutorials that we liked and
+            would sit on the phone for hours while we completed them. (We
+            compared our results by sending them through AOL Instant
+            Messenger... ✌🏻👴🏻✌🏻) From there, I dabbled in (terrible) Flash
+            animations and eventually found my footing tinkering with late-90's
+            web builders like Yahoo! GeoCities, where the restrictions of that
+            platform made me want to learn how to write my own code.
+          </motion.span>
+          <motion.span variants={fadeUpIn}>
+            My first sites were Photoshop designs cut into pieces and
+            reassembled for the web with code from Adobe Dreamweaver. Just as I
+            was publishing my first site, I got my first dose of just how
+            quickly things change in the world of web design and development and
+            began the never-ending journey of learning the new tools of the
+            trade. Through table layouts, floats, and the rest, I have stayed on
+            a constant hunt for the technologies that make sites faster and more
+            versatile, with a majority of my current work being built on React
+            with GatsbyJS for static-site generation.
+          </motion.span>
+          <span>
+            Since the mid 2000's I have been working on a freelance basis with a
+            variety of clients, helping them establish brand identities and
+            better reach their audiences.
+          </span>
+          <span>
+            When I'm not behind the computer, you can find me acting on stage or
+            playing music, or looking for the nearest Starbucks. ☕️
+          </span>
+        </motion.div>
+      </motion.section>
       <section className={styles.sectionWrapper}>
         <div className={styles.titleWrapper}>My Process</div>
         <div className={`${styles.copyWrapper} ${styles.process}`}>

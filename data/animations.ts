@@ -5,6 +5,19 @@ const fadeUpIn = {
   animate: { y: 0, opacity: 1, transition: { duration: 0.75, ease: easing } },
   exit: {
     opacity: 0,
+    transition: { duration: 0.4, staggerChildren: 0.1 },
+  },
+};
+
+const fadeUpInWithChildren = {
+  initial: { y: 30, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.75, ease: easing, staggerChildren: 0.1 },
+  },
+  exit: {
+    opacity: 0,
     transition: { duration: 0.4, staggerChildren: 0.05 },
   },
 };
@@ -17,4 +30,4 @@ const stagger = {
   },
 };
 
-export { easing, fadeUpIn, stagger };
+export { fadeUpIn, fadeUpInWithChildren, stagger };

@@ -36,6 +36,11 @@
   width: 65%;
 }
 
+.copyWrapper span {
+  display: block;
+  margin-bottom: 40px;
+}
+
 .process {
   display: flex;
   flex-wrap: wrap;
