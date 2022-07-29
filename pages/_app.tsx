@@ -5,7 +5,7 @@ import NavBar from '../components/navbar';
 
 import Head from 'next/head';
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <Head>
@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <NavBar />
       <div className='fullWrap'>
         <AnimatePresence exitBeforeEnter>
-          <Component {...pageProps} />
+          <Component {...pageProps} key={router.asPath} />
         </AnimatePresence>
       </div>
     </>
