@@ -1,13 +1,19 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import styles from '../styles/About.module.css';
+import { motion } from 'framer-motion';
 
 import Footer from '../components/footer';
 import zachImage from '../public/images/ZachC181.jpg';
 
 const About: NextPage = () => {
   return (
-    <div className={styles.aboutWrapper}>
+    <motion.div
+      className={styles.aboutWrapper}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <section className={styles.sectionWrapper}>
         <div className={styles.titleWrapper}>
           Quick and clean designs for over a decade
@@ -87,7 +93,7 @@ const About: NextPage = () => {
         <Image src={zachImage} alt='' placeholder='blur' />
       </section>
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 
