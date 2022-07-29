@@ -5,13 +5,10 @@
   height: 120px;
   left: 0;
   position: fixed;
-  /* top: 0; */
-  width: 100%;
-  z-index: 1000;
-
-  /* //! To be replaced with animation library */
   top: -120px;
   transition: top 0.25s ease-out;
+  width: 100%;
+  z-index: 1000;
 }
 
 .logoContainer {
