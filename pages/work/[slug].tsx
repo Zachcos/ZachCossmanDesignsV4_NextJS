@@ -22,10 +22,7 @@ const ProjectDetail = ({ project }: Props) => {
       exit='exit'
       variants={stagger}
     >
-      <motion.div
-        className={styles.detailsContainer}
-        variants={fadeUpInWithChildren}
-      >
+      <motion.div className={styles.detailsContainer} variants={stagger}>
         <motion.div className={styles.info} variants={fadeUpInWithChildren}>
           <motion.h2 className={styles.title} variants={fadeUpIn}>
             {title}
