@@ -22,7 +22,7 @@ const Home: NextPage = () => {
           For over 10 years I've been designing and developing sites and web
           experiences for companies and creative individuals. Check out my work,
           learn more{' '}
-          <Link href='/about' aria-label='about' passHref>
+          <Link href='/about' aria-label='about' scroll={false}>
             <a className={styles.aboutLink}>about me</a>
           </Link>
           , and get in touch...

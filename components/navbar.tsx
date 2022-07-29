@@ -52,12 +52,12 @@ const NavBar = () => {
         <span />
       </div>
       <div className={`${styles.navItems} ${isOpen ? styles.open : ''}`}>
-        <Link href='/work' aria-label='work'>
+        <Link href='/work' aria-label='work' scroll={false}>
           <a className={styles.textLink} onClick={() => setIsOpen(false)}>
             work
           </a>
         </Link>
-        <Link href='/about' aria-label='about'>
+        <Link href='/about' aria-label='about' scroll={false}>
           <a className={styles.textLink} onClick={() => setIsOpen(false)}>
             about
           </a>
