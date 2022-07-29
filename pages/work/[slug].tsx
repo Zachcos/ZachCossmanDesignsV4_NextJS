@@ -6,6 +6,8 @@ import { featuredProjectData } from '../../data/data';
 import styles from '../../styles/ProjectDetail.module.css';
 import { Arrow } from '../../components/icons';
 import Footer from '../../components/footer';
+import { motion } from 'framer-motion';
+import { fadeUpIn, fadeUpInWithChildren, stagger } from '../../data/animations';
 
 interface Props {
   project: FeaturedItemProps;
@@ -14,26 +16,43 @@ interface Props {
 const ProjectDetail = ({ project }: Props) => {
   const { title, description, liveUrl, nextProj, assets } = project;
   return (
-    <>
-      <div className={styles.detailsContainer}>
-        <div className={styles.info}>
-          <h2 className={styles.title}>{title}</h2>
-          <div className={styles.field}>
-            <span className={styles.fieldLabel}>liveUrl</span>
-            <span className={styles.fieldInfo}>
+    <motion.div
+      initial='initial'
+      animate='animate'
+      exit='exit'
+      variants={stagger}
+    >
+      <motion.div
+        className={styles.detailsContainer}
+        variants={fadeUpInWithChildren}
+      >
+        <motion.div className={styles.info} variants={fadeUpInWithChildren}>
+          <motion.h2 className={styles.title} variants={fadeUpIn}>
+            {title}
+          </motion.h2>
+          <motion.div className={styles.field} variants={fadeUpInWithChildren}>
+            <motion.span className={styles.fieldLabel} variants={fadeUpIn}>
+              liveUrl
+            </motion.span>
+            <motion.span className={styles.fieldInfo} variants={fadeUpIn}>
               <a href={liveUrl} target='_blank' rel='noreferrer'>
                 {liveUrl}
               </a>
-            </span>
-          </div>
-        </div>
-        <div className={styles.description}>
+            </motion.span>
+          </motion.div>
+        </motion.div>
+        <motion.div
+          className={styles.description}
+          variants={fadeUpInWithChildren}
+        >
           {description.map((para: string, index: number) => (
-            <p key={index}>{para}</p>
+            <motion.p key={index} variants={fadeUpIn}>
+              {para}
+            </motion.p>
           ))}
-        </div>
-      </div>
-      <div className={styles.assetContainer}>
+        </motion.div>
+      </motion.div>
+      <motion.div className={styles.assetContainer} variants={fadeUpIn}>
         {assets.map((asset: string, index: number) => (
           <Image
             src={asset}
@@ -44,7 +63,7 @@ const ProjectDetail = ({ project }: Props) => {
             objectFit='contain'
           />
         ))}
-      </div>
+      </motion.div>
       <div className={styles.nextContainer}>
         <div className={styles.nextDetails}>
           <div className={styles.nextLabel}>Next Project</div>
@@ -59,7 +78,7 @@ const ProjectDetail = ({ project }: Props) => {
         </div>
       </div>
       <Footer />
-    </>
+    </motion.div>
   );
 };
 

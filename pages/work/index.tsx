@@ -1,11 +1,13 @@
 import React from 'react';
 import styles from '../../styles/Work.module.css';
-import { featuredProjectData, otherProjectData } from '../../data/data';
-import Image from 'next/image';
-
-import Footer from '../../components/footer';
-import FeaturedItem from '../../components/featuredItem';
 import { GetStaticProps } from 'next';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+
+import { featuredProjectData, otherProjectData } from '../../data/data';
+import { fadeUpIn, fadeUpInWithChildren, stagger } from '../../data/animations';
+import FeaturedItem from '../../components/featuredItem';
+import Footer from '../../components/footer';
 
 export const getStaticProps: GetStaticProps = async () => {
   return {
@@ -24,14 +26,27 @@ interface Props {
 //? Look into how to implement NextPage
 const Work = ({ featured, other }: Props) => {
   return (
-    <>
-      <div className={styles.workWrapper}>
-        <div className={styles.featureWrapper}>
-          <div className={styles.wrapperHeading}>Featured Projects</div>
+    <motion.div
+      initial='initial'
+      animate='animate'
+      exit='exit'
+      variants={stagger}
+    >
+      <motion.div className={styles.workWrapper} variants={fadeUpIn}>
+        <motion.div
+          className={styles.featureWrapper}
+          variants={fadeUpInWithChildren}
+        >
+          <motion.div
+            className={styles.wrapperHeading}
+            variants={fadeUpInWithChildren}
+          >
+            Featured Projects
+          </motion.div>
           {featured.map((item: FeaturedItemProps) => (
             <FeaturedItem key={item.id} {...item} />
           ))}
-        </div>
+        </motion.div>
         <div className={styles.otherWrapper}>
           <div className={styles.wrapperHeading}>Other Projects</div>
           {other.map((item: OtherItemProps) => (
@@ -48,9 +63,9 @@ const Work = ({ featured, other }: Props) => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
       <Footer />
-    </>
+    </motion.div>
   );
 };
 
