@@ -1,24 +1,24 @@
 const easing = [0.6, -0.5, 0.01, 0.99];
 
 const fadeUpIn = {
-  initial: { y: 30, opacity: 0 },
-  animate: { y: 0, opacity: 1, transition: { duration: 0.75, ease: easing } },
+  initial: { y: 20, opacity: 0 },
+  animate: { y: 0, opacity: 1, transition: { duration: 0.6, ease: easing } },
   exit: {
     opacity: 0,
-    transition: { duration: 0.4, staggerChildren: 0.1 },
+    transition: { duration: 0.4 },
   },
 };
 
 const fadeUpInWithChildren = {
-  initial: { y: 30, opacity: 0 },
+  initial: { y: 20, opacity: 0 },
   animate: {
     y: 0,
     opacity: 1,
-    transition: { duration: 0.75, ease: easing, staggerChildren: 0.1 },
+    transition: { duration: 0.6, ease: easing, staggerChildren: 0.05 },
   },
   exit: {
     opacity: 0,
-    transition: { duration: 0.4, staggerChildren: 0.05 },
+    transition: { duration: 0.4 },
   },
 };
 
