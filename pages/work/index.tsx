@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../../styles/Work.module.css';
 import { GetStaticProps } from 'next';
+import type { NextPage } from 'next';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -23,8 +24,7 @@ interface Props {
   other: OtherItemProps[];
 }
 
-//? Look into how to implement NextPage
-const Work = ({ featured, other }: Props) => {
+const Work: NextPage<Props> = ({ featured, other }) => {
   return (
     <motion.div
       initial='initial'
