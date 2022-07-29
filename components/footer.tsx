@@ -2,6 +2,8 @@ import React from 'react';
 import styles from '../styles/Footer.module.css';
 import CtaBtn from './ctaBtn';
 import { Behance, Github, Arrow } from './icons';
+import { motion } from 'framer-motion';
+import { fadeUpIn } from '../data/animations';
 
 const Footer = () => {
   function scrollUp() {
@@ -12,7 +14,7 @@ const Footer = () => {
     });
   }
   return (
-    <div className={styles.footerWrapper}>
+    <motion.div className={styles.footerWrapper} variants={fadeUpIn}>
       <div className={styles.cta}>
         <div className={styles.title}>Let's work together</div>
         <div className={styles.copy}>
@@ -46,7 +48,7 @@ const Footer = () => {
           </a>
         </div>
       </nav>
-    </div>
+    </motion.div>
   );
 };
 

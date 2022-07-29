@@ -14,6 +14,7 @@ const About: NextPage = () => {
       initial='initial'
       animate='animate'
       exit='exit'
+      variants={fadeUpIn}
     >
       <motion.section className={styles.sectionWrapper} variants={stagger}>
         <motion.div className={styles.titleWrapper} variants={fadeUpIn}>

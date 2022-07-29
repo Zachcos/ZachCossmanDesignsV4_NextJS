@@ -61,7 +61,7 @@ const ProjectDetail = ({ project }: Props) => {
           />
         ))}
       </motion.div>
-      <div className={styles.nextContainer}>
+      <motion.div className={styles.nextContainer} variants={fadeUpIn}>
         <div className={styles.nextDetails}>
           <div className={styles.nextLabel}>Next Project</div>
           <div className={styles.nextProjectName}>
@@ -73,7 +73,7 @@ const ProjectDetail = ({ project }: Props) => {
             </Link>
           </div>
         </div>
-      </div>
+      </motion.div>
       <Footer />
     </motion.div>
   );
