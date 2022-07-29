@@ -20,7 +20,14 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       </Head>
       <NavBar />
       <div className='fullWrap'>
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence
+          exitBeforeEnter
+          onExitComplete={() => {
+            window.scroll({
+              top: 0,
+            });
+          }}
+        >
           <Component {...pageProps} key={router.asPath} />
         </AnimatePresence>
       </div>
