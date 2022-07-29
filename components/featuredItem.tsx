@@ -12,7 +12,7 @@ interface Props {
 const FeaturedItem = ({ slug, portImg, title }: Props) => {
   return (
     <div className={styles.wrapper}>
-      <Link href={`/work/${slug}`}>
+      <Link href={`/work/${slug}`} scroll={false}>
         <a>
           <div className={styles.imageFrame}>
             <Image src={portImg} alt='' layout='fill' objectFit='cover' />
