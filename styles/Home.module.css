@@ -49,17 +49,23 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    margin-bottom: 100px;
     width: 100%;
   }
 
   .heroDisplayText {
-    margin-bottom: 120px;
+    margin-bottom: 80px;
     text-align: center;
   }
 
   .heroDisplayCopy {
     margin-bottom: 120px;
     text-align: center;
+  }
+
+  .ctaContainer {
+    display: flex;
+    justify-content: center;
   }
 }
 
