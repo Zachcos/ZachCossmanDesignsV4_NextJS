@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import { motion } from 'framer-motion';
 import CtaBtn from '../components/ctaBtn';
-import { easing, fadeUpIn, stagger } from '../data/animations';
+import { fadeUpIn, stagger } from '../data/animations';
 
 const Home: NextPage = () => {
   return (
