@@ -27,7 +27,7 @@ const Home: NextPage = () => {
           </Link>
           , and get in touch...
         </motion.p>
-        <motion.div variants={fadeUpIn}>
+        <motion.div variants={fadeUpIn} className={styles.ctaContainer}>
           <CtaBtn />
         </motion.div>
       </motion.div>
