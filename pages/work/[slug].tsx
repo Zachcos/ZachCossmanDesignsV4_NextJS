@@ -65,7 +65,7 @@ const ProjectDetail = ({ project }: Props) => {
         <div className={styles.nextDetails}>
           <div className={styles.nextLabel}>Next Project</div>
           <div className={styles.nextProjectName}>
-            <Link href={`/work${nextProj.slug}`}>
+            <Link href={`/work${nextProj.slug}`} scroll={false}>
               <a>
                 {nextProj.title}
                 <Arrow />
