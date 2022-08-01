@@ -38,7 +38,7 @@ const NavBar = () => {
       style={{ top: shouldShow || isMobile ? 0 : '-120px' }}
     >
       <div className={styles.logoContainer}>
-        <Link href='/' aria-label='home'>
+        <Link href='/' aria-label='home' scroll={false}>
           <a>
             <Logo />
           </a>
