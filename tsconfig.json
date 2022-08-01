@@ -18,6 +18,11 @@
     "forceConsistentCasingInFileNames": true,
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "data/use-page-transition-hook.js"
+  ],
   "exclude": ["node_modules"]
 }
