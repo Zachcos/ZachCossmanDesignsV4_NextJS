@@ -134,13 +134,13 @@ table {
 @font-face {
   font-family: 'Open Sans';
   font-weight: 100 900;
-  src: url('../fonts/OpenSans-VariableFont.ttf') format('truetype-variations');
+  src: url('../public/fonts/OpenSans-VariableFont.ttf') format('truetype-variations');
 }
 
 @font-face {
   font-family: 'Oswald';
   font-weight: 100 900;
-  src: url('../fonts/Oswald-VariableFont.ttf') format('truetype-variations');
+  src: url('../public/fonts/Oswald-VariableFont.ttf') format('truetype-variations');
 }
 /*** End font declaration ***/
 
