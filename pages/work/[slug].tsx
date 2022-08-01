@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { featuredProjectData } from '../../data/data';
 import styled from 'styled-components';
+import { colors, font, breakpoints } from '../../data/variables';
 import { Arrow } from '../../components/icons';
 import Footer from '../../components/footer';
 import { motion } from 'framer-motion';
@@ -23,9 +24,9 @@ const FullWrapper = styled(motion.div)`
     position: relative;
   }
   .title {
-    color: var(--color-accent);
+    color: ${colors.accent};
     font-family: 'Oswald', sans-serif;
-    font-size: var(--font-h3);
+    font-size: ${font.h3};
     font-weight: 400;
     margin-bottom: 40px;
     position: relative;
@@ -38,7 +39,7 @@ const FullWrapper = styled(motion.div)`
     position: relative;
   }
   .fieldLabel {
-    color: var(--color-lightGrey);
+    color: ${colors.lightGrey};
     font-size: 0.8rem;
     font-weight: 300;
     letter-spacing: 1px;
@@ -47,14 +48,14 @@ const FullWrapper = styled(motion.div)`
     text-transform: uppercase;
   }
   .fieldInfo {
-    font-size: var(--font-h5);
+    font-size: ${font.h5};
     a {
-      color: var(--color-lightGrey);
+      color: ${colors.lightGrey};
       position: relative;
       text-decoration: none;
     }
     &:after {
-      background: var(--color-accent);
+      background: ${colors.accent};
       bottom: -12px;
       content: '';
       height: 3px;
@@ -89,7 +90,7 @@ const FullWrapper = styled(motion.div)`
   }
   .nextContainer {
     align-items: center;
-    border-bottom: 1px solid var(--color-lightGrey);
+    border-bottom: 1px solid ${colors.lightGrey};
     display: flex;
     height: 100px;
     justify-content: flex-end;
@@ -102,7 +103,7 @@ const FullWrapper = styled(motion.div)`
     text-align: right;
   }
   .nextLabel {
-    color: var(--color-lightGrey);
+    color: ${colors.lightGrey};
     font-size: 0.7rem;
     font-weight: 300;
     letter-spacing: 1px;
@@ -111,14 +112,14 @@ const FullWrapper = styled(motion.div)`
     text-transform: uppercase;
   }
   .nextProjectName {
-    font-size: var(--font-h5);
+    font-size: ${font.h5};
     position: relative;
     a {
-      color: var(--color-lightGrey);
+      color: ${colors.lightGrey};
       padding-right: 50px;
       text-decoration: none;
       &:hover svg {
-        fill: var(--color-accent);
+        fill: ${colors.accent};
         right: 0;
       }
     }
@@ -141,17 +142,17 @@ const FullWrapper = styled(motion.div)`
       width: 100%;
     }
     .title {
-      font-size: var(--font-h2);
+      font-size: ${font.h2};
       margin-bottom: 50px;
       width: 100%;
     }
   }
-  @media screen and (max-width: 865px) {
+  @media screen and (max-width: ${breakpoints.tablet}) {
     .nextContainer {
       width: 50%;
     }
   }
-  @media screen and (max-width: 630px) {
+  @media screen and (max-width: ${breakpoints.phone}) {
     .detailsContainer {
       margin: 160px 0 100px 0;
     }
@@ -159,7 +160,7 @@ const FullWrapper = styled(motion.div)`
       margin-bottom: 50px;
     }
     .title {
-      font-size: var(--font-h4);
+      font-size: ${font.h4};
     }
     .field {
       width: 100%;
@@ -168,7 +169,7 @@ const FullWrapper = styled(motion.div)`
       font-size: 0.7rem;
     }
     .fieldInfo {
-      font-size: var(--font-base);
+      font-size: ${font.base};
     }
     .nextContainer {
       width: 100%;

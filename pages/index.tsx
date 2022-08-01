@@ -2,6 +2,7 @@ import React from 'react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import styled from 'styled-components';
+import { colors, font, breakpoints } from '../data/variables';
 import { motion } from 'framer-motion';
 import CtaBtn from '../components/ctaBtn';
 import { fadeUpIn, stagger } from '../data/animations';
@@ -11,9 +12,9 @@ const HeroContainer = styled(motion.div)`
   position: relative;
   width: 695px;
   .heroDisplayText {
-    color: var(--color-accent);
+    color: ${colors.accent};
     font-family: 'Oswald', sans-serif;
-    font-size: var(--font-h1);
+    font-size: ${font.h1};
     font-weight: 400;
     line-height: 1.2em;
     margin-bottom: 50px;
@@ -27,10 +28,10 @@ const HeroContainer = styled(motion.div)`
   }
   .aboutLink {
     text-decoration: none;
-    color: var(--color-lightGrey);
+    color: ${colors.lightGrey};
     position: relative;
     &:after {
-      background: var(--color-accent);
+      background: ${colors.accent};
       bottom: -8px;
       content: '';
       height: 3px;
@@ -45,7 +46,7 @@ const HeroContainer = styled(motion.div)`
       opacity: 1;
     }
   }
-  @media screen and (max-width: 865px) {
+  @media screen and (max-width: ${breakpoints.tablet}) {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -64,10 +65,10 @@ const HeroContainer = styled(motion.div)`
       justify-content: center;
     }
   }
-  @media screen and (max-width: 630px) {
+  @media screen and (max-width: ${breakpoints.phone}) {
     margin-top: 150px;
     .heroDisplayText {
-      font-size: var(--font-h3);
+      font-size: ${font.h3};
       margin-bottom: 60px;
     }
     .heroDisplayCopy {

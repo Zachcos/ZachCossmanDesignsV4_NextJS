@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { colors, font, breakpoints } from '../../data/variables';
 import { GetStaticProps } from 'next';
 import type { NextPage } from 'next';
 import Image from 'next/image';
@@ -25,9 +26,9 @@ const PageWrapper = styled(motion.div)`
     width: 100%;
   }
   .wrapperHeading {
-    color: var(--color-accent);
+    color: ${colors.accent};
     font-family: 'Oswald', sans-serif;
-    font-size: var(--font-h2);
+    font-size: ${font.h2};
     margin-bottom: 100px;
     position: relative;
     text-transform: uppercase;
@@ -52,14 +53,14 @@ const PageWrapper = styled(motion.div)`
       transform: scale(1.1);
     }
   }
-  @media screen and (max-width: 856px) {
+  @media screen and (max-width: ${breakpoints.tablet}) {
     .otherProjectWrapper {
       height: 200px;
       margin: 15px;
       width: 200px;
     }
   }
-  @media screen and (max-width: 630px) {
+  @media screen and (max-width: ${breakpoints.phone}) {
     .workWrapper {
       margin: 170px 0 100px 0;
     }

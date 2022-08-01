@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import styled from 'styled-components';
+import { colors, font, breakpoints } from '../data/variables';
 import { motion } from 'framer-motion';
 import { fadeUpIn, fadeUpInWithChildren, stagger } from '../data/animations';
 
@@ -23,9 +24,9 @@ const AboutWrapper = styled(motion.div)`
     }
   }
   .titleWrapper {
-    color: var(--color-accent);
+    color: ${colors.accent};
     font-family: 'Oswald';
-    font-size: var(--font-h2);
+    font-size: ${font.h2};
     line-height: 1.2em;
     margin-right: 110px;
     position: relative;
@@ -33,7 +34,7 @@ const AboutWrapper = styled(motion.div)`
     width: 30%;
   }
   .copyWrapper {
-    font-size: var(--font-base);
+    font-size: ${font.base};
     line-height: 2rem;
     position: relative;
     width: 65%;
@@ -57,9 +58,9 @@ const AboutWrapper = styled(motion.div)`
         flex-grow: 2;
       }
       .subheading {
-        color: var(--color-lightGrey);
+        color: ${colors.lightGrey};
         font-family: 'Oswald', sans-serif;
-        font-size: var(--font-h4);
+        font-size: ${font.h4};
         margin-bottom: 15px;
         text-transform: uppercase;
       }
@@ -71,7 +72,7 @@ const AboutWrapper = styled(motion.div)`
     font-weight: 400;
     line-height: 2.4rem;
   }
-  @media screen and (max-width: 865px) {
+  @media screen and (max-width: ${breakpoints.tablet}) {
     .sectionWrapper {
       flex-direction: column;
     }
@@ -85,7 +86,7 @@ const AboutWrapper = styled(motion.div)`
     }
   }
 
-  @media screen and (max-width: 630px) {
+  @media screen and (max-width: ${breakpoints.phone}) {
     .sectionWrapper {
       margin: 100px 0;
       &:first-child {
@@ -93,7 +94,7 @@ const AboutWrapper = styled(motion.div)`
       }
     }
     .titleWrapper {
-      font-size: var(--font-h3);
+      font-size: ${font.h3};
       margin-bottom: 60px;
       width: 100%;
     }
