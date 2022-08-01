@@ -37,6 +37,10 @@ const AboutWrapper = styled(motion.div)`
     line-height: 2rem;
     position: relative;
     width: 65%;
+    span {
+      display: block;
+      margin-bottom: 40px;
+    }
   }
   .process {
     display: flex;
