@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { colors, breakpoints } from '../data/variables';
 
 const GlobalStyle = createGlobalStyle`
 /*** Reset***/
@@ -148,8 +149,8 @@ html {
 }
 
 body {
-  background-color: var(--color-darkGrey);
-  color: var(--color-lightGrey);
+  background-color: ${colors.darkGrey};
+  color: ${colors.lightGrey};
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
 }
@@ -158,7 +159,7 @@ body {
   margin: 0 60px;
 }
 
-@media screen and (max-width: 865px) {
+@media screen and (max-width: ${breakpoints.tablet}) {
   html {
     font-size: 16px;
   }

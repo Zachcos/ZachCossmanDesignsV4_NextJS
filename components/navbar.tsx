@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { Behance, Github, Logo } from './icons';
+import { colors, font, breakpoints } from '../data/variables';
 
 const NavBarWrapper = styled.nav`
   align-items: center;
-  background: var(--color-darkGrey);
+  background: ${colors.darkGrey};
   display: flex;
   height: 120px;
   left: 0;
@@ -27,14 +28,14 @@ const NavBarWrapper = styled.nav`
     align-items: center;
     display: flex;
     font-family: 'Oswald', sans-serif;
-    font-size: var(--font-base);
+    font-size: ${font.base};
     justify-content: space-between;
     margin-right: 60px;
     width: 400px;
   }
   .textLink,
   .iconLink {
-    color: var(--color-lightGrey);
+    color: ${colors.lightGrey};
     cursor: pointer;
     padding: 5px;
     position: relative;
@@ -42,7 +43,7 @@ const NavBarWrapper = styled.nav`
   }
   .textLink {
     &:after {
-      background: var(--color-accent);
+      background: ${colors.accent};
       bottom: -10px;
       content: '';
       height: 3px;
@@ -61,7 +62,7 @@ const NavBarWrapper = styled.nav`
     transition: all 0.2s ease-out;
     z-index: 1;
     &:after {
-      background: var(--color-accent);
+      background: ${colors.accent};
       border-radius: 50%;
       bottom: 50%;
       content: '';
@@ -75,7 +76,7 @@ const NavBarWrapper = styled.nav`
       z-index: -1;
     }
     svg:hover {
-      fill: var(--color-darkGrey);
+      fill: ${colors.darkGrey};
     }
     &:hover:after {
       height: 50px;
@@ -115,15 +116,15 @@ const NavBarWrapper = styled.nav`
       }
     }
   }
-  @media screen and (max-width: 630px) {
+  @media screen and (max-width: ${breakpoints.phone}) {
     .logoContainer {
       margin: 0 auto 0 40px;
     }
     .navItems {
-      background: var(--color-darkGrey);
+      background: ${colors.darkGrey};
       display: flex;
       flex-direction: column;
-      font-size: var(--font-h5);
+      font-size: ${font.h5};
       height: 100vh;
       justify-content: space-around;
       margin-right: 0;

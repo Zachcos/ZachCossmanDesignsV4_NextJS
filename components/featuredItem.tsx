@@ -4,6 +4,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { fadeUpIn } from '../data/animations';
+import { colors, font, breakpoints } from '../data/variables';
 
 const FeaturedItemWrapper = styled(motion.div)`
   height: 550px;
@@ -29,16 +30,16 @@ const FeaturedItemWrapper = styled(motion.div)`
     }
   }
   .title {
-    color: var(--color-darkGrey);
+    color: ${colors.darkGrey};
     font-family: 'Oswald', sans-serif;
-    font-size: var(--font-base);
+    font-size: ${font.base};
     font-weight: 100;
     margin-bottom: 20px;
     position: absolute;
     right: 30px;
     top: 30px;
   }
-  @media screen and (max-width: 630px) {
+  @media screen and (max-width: ${breakpoints.phone}) {
     height: 350px;
 
     .imageFrame {

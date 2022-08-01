@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import { colors } from '../data/variables';
 
 const SocialIcon = styled.svg`
-  fill: var(--color-lightGrey);
+  fill: ${colors.lightGrey};
   height: 24px;
   transition: fill 0.15s ease-out;
   width: 24px;
 `;
 
 const ArrowIcon = styled.svg`
-  fill: var(--color-lightGrey);
+  fill: ${colors.lightGrey};
   height: 28px;
   width: 28px;
 `;
@@ -19,10 +20,10 @@ const LogoIcon = styled.svg`
   clip-rule: evenodd;
   stroke-linejoin: round;
   stroke-miterlimit: 2;
-  fill: var(--color-accent);
+  fill: ${colors.accent};
   width: 32px;
   #Layer-2 path {
-    fill: var(--color-accent);
+    fill: ${colors.accent};
   }
 `;
 

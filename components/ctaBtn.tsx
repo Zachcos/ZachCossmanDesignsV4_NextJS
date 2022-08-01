@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { colors } from '../data/variables';
 
 const Button = styled.button`
   align-items: center;
-  background: var(--color-lightGrey);
+  background: ${colors.lightGrey};
   border: none;
-  color: var(--color-darkGrey);
+  color: ${colors.darkGrey};
   cursor: pointer;
   display: flex;
   font-size: 0.9rem;
@@ -17,7 +18,7 @@ const Button = styled.button`
   transition: 0.15s ease-out;
   width: 230px;
   &:after {
-    background: var(--color-accent);
+    background: ${colors.accent};
     bottom: 0;
     content: '';
     height: 5px;

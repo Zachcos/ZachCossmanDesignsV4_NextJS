@@ -4,6 +4,7 @@ import CtaBtn from './ctaBtn';
 import { Behance, Github, Arrow } from './icons';
 import { motion } from 'framer-motion';
 import { fadeUpIn } from '../data/animations';
+import { colors, font, breakpoints } from '../data/variables';
 
 const FooterWrapper = styled(motion.div)`
   height: 450px;
@@ -14,14 +15,14 @@ const FooterWrapper = styled(motion.div)`
     flex-direction: column;
   }
   .title {
-    color: var(--color-accent);
+    color: ${colors.accent};
     font-family: 'Oswald', sans-serif;
-    font-size: var(--font-h3);
+    font-size: ${font.h3};
     margin-bottom: 30px;
     text-transform: uppercase;
   }
   .copy {
-    font-size: var(--font-base);
+    font-size: ${font.base};
     margin-bottom: 50px;
   }
   nav {
@@ -50,7 +51,7 @@ const FooterWrapper = styled(motion.div)`
       }
     }
     a {
-      color: var(--color-lightGrey);
+      color: ${colors.lightGrey};
       cursor: pointer;
       padding: 10px 5px;
       position: relative;
@@ -60,7 +61,7 @@ const FooterWrapper = styled(motion.div)`
   }
   .textLink {
     &:after {
-      background: var(--color-accent);
+      background: ${colors.accent};
       bottom: -10px;
       content: '';
       height: 3px;
@@ -86,11 +87,11 @@ const FooterWrapper = styled(motion.div)`
     &:hover {
       bottom: 15px;
       svg {
-        fill: var(--color-accent);
+        fill: ${colors.accent};
       }
     }
   }
-  @media screen and (max-width: 630px) {
+  @media screen and (max-width: ${breakpoints.phone}) {
     .cta {
       align-items: center;
     }
