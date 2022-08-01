@@ -1,7 +1,8 @@
-import '../styles/globals.css';
+// import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { AnimatePresence } from 'framer-motion';
 import NavBar from '../components/navbar';
+import GlobalStyle from '../styles/globalStyles';
 
 import Head from 'next/head';
 
@@ -18,6 +19,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         />
         <title>Zach Cossman Designs</title>
       </Head>
+      <GlobalStyle />
       <NavBar />
       <div className='fullWrap'>
         <AnimatePresence
