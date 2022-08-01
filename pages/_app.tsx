@@ -2,10 +2,12 @@ import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { AnimatePresence } from 'framer-motion';
 import NavBar from '../components/navbar';
+import { usePageTransitionFix } from '../data/use-page-transition-hook';
 
 import Head from 'next/head';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
+  usePageTransitionFix();
   return (
     <>
       <Head>
